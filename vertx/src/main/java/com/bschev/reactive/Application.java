@@ -17,7 +17,7 @@ public class Application {
                 JsonObject config = ar.result();
                 DeploymentOptions deploymentOptions = new DeploymentOptions();
                 deploymentOptions.setConfig(config);
-                vertx.deployVerticle(new Server(), deploymentOptions);
+                vertx.deployVerticle(Server.class, deploymentOptions);
             }
         });
     }
